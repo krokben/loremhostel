@@ -1,0 +1,40 @@
+=e($element)
+  &__#{$element}
+    @content
+
+=m($modifier)
+  &--#{$modifier}
+    @content
+
+=k($name)
+  @-webkit-keyframes #{$name}
+    @content
+  @-moz-keyframes #{$name}
+    @content
+  @-ms-keyframes #{$name}
+    @content
+  @keyframes #{$name}
+    @content
+
+=vertical-align($position: relative)
+  position: $position
+  top: 50%
+  -webkit-transform: translateY(-50%)
+  -ms-transform: translateY(-50%)
+  transform: translateY(-50%)
+
+// =columnCount($name)
+//   @-moz-column-count
+//     @content
+//   @-webkit-column-count
+//     @content
+//   @column-count
+//     @content
+
+// =columnGap($name)
+//   @-moz-column-gap
+//     @content
+//   @-webkit-column-gap
+//     @content
+//   @column-gap
+//     @content

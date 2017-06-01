@@ -1,0 +1,21 @@
+.gallery
+	column-count: 2
+	column-gap: 15px
+	
+	+e('item')
+		background-color: #fff
+		box-shadow: 0 1px 4px 0 #ccc
+		cursor: pointer
+		margin-bottom: 15px
+
+	+e('img')
+		height: auto
+		width: 100%
+
+@media screen and (min-width: 768px)
+	.gallery
+		column-count: 3
+
+@media screen and (min-width: 992px)
+	.gallery
+		column-count: 4

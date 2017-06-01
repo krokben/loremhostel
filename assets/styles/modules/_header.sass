@@ -1,0 +1,39 @@
+.header
+	position: relative
+	margin-bottom: 6vw
+
+	+m('banner-hidden')
+		animation: hideBanner 1.5s forwards
+
+	+m('banner')
+		animation: showBanner 1s forwards
+		background-color: #fff
+		box-shadow: 0 1px 4px 0 #ccc
+		margin-bottom: 15px
+
+	+e('logo')
+		font-size: 1.7em
+
+	+e('trigram')
+		color: #ccc
+		font-size: 2em
+		position: absolute
+		top: 18
+		right: 20
+
++k('hideBanner')
+	0%
+		margin-top: 0
+	100%
+		margin-top: -100px
+
++k('showBanner')
+	0%
+		margin-top: -100
+	100%
+		margin-top: 0
+
+@media screen and (min-width: 992px)
+	.header
+		+e('logo')
+			font-size: 2em

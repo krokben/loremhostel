@@ -1,0 +1,33 @@
+.navbar
+	display: none
+	float: right
+	list-style-type: none
+	margin: 20px 0
+
+	+e('item')
+		float: left
+		margin: 0 5px
+
+		+m('shrink')
+			animation: shrink 1s forwards
+
++k('shrink')
+	0%
+		margin: 0 15px
+		opacity: 1
+	80%
+		opacity: 0
+	100%
+		margin: 0 -32px
+		opacity: 0
+
+@media screen and (min-width: 768px)
+	.navbar
+		display: inline-block
+
+@media screen and (min-width: 992px)
+	.navbar
+		margin: 23px 0
+	.navbar
+		+e('item')
+			margin: 0 15px

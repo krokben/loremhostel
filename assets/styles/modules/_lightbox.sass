@@ -1,0 +1,43 @@
+.lightbox
+	background-color: #000
+	overflow: hidden
+	position: fixed
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+
+	+m('hidden')
+		display: none
+
+	+e('outer-container')
+		height: 100%
+
+	+e('container')
+		@include vertical-align()
+		border: 8px solid #fff
+
+	+e('exit')
+		background-color: #fff
+		border: 4px solid #eee
+		border-radius: 50%
+		box-shadow: 0 1px 4px 0 #ccc
+		color: #999
+		cursor: pointer
+		font-size: 1.2em
+		padding-top: 1px
+		text-align: center
+		height: 40px
+		width: 40px
+		position: absolute
+		right: -20
+		top: -20
+
+		&:hover
+			border: 4px solid #333
+			box-shadow: none
+			color: #333
+
+	+e('img')
+		height: auto
+		width: 100%

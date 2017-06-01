@@ -1,0 +1,18 @@
+include header-front
+
+.container
+	.row
+		.col-md-2.hidden-sm
+		.col-md-4.col-sm-6
+			.searchbar
+				label(for="checkIn").searchbar__label check-in
+				input#checkIn.searchbar__input
+		.col-md-4.col-sm-6
+			.searchbar
+				label(for="checkOut").searchbar__label check-out
+				input#checkOut.searchbar__input
+				i(aria-hidden="true").fa.fa-search.searchbar__button
+		.col-md-2.hidden-sm
+
+script(src="assets/scripts/main.js")
+include footer-front
