@@ -1,6 +1,7 @@
 .header
 	position: relative
 	margin-bottom: 6vw
+	height: 100px
 
 	+m('banner-hidden')
 		animation: hideBanner 1.5s forwards
@@ -11,15 +12,30 @@
 		box-shadow: 0 1px 4px 0 #ccc
 		margin-bottom: 15px
 
+	+m('expand')
+		animation: expandHeader 1s forwards
+
+	+m('shrink')
+		animation: shrinkHeader 1s forwards
+
 	+e('logo')
 		font-size: 1.7em
 
 	+e('trigram')
 		color: #ccc
+		cursor: pointer
 		font-size: 2em
 		position: absolute
-		top: 18
+		top: 27
 		right: 20
+
+		+m('front')
+			color: #666
+			top: 15
+
+		&:hover
+			color: #000
+			transition: color 1s
 
 +k('hideBanner')
 	0%
@@ -32,6 +48,23 @@
 		margin-top: -100
 	100%
 		margin-top: 0
+
++k('expandHeader')
+	0%
+		height: 100px
+	100%
+		height: 450px
+
++k('shrinkHeader')
+	0%
+		height: 450px
+	100%
+		height: 100px
+
+@media screen and (min-width: 768px)
+	.header
+		+e('trigram')
+			visibility: hidden
 
 @media screen and (min-width: 992px)
 	.header

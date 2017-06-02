@@ -13,9 +13,5 @@ function shrinkNavbar(e) {
 	setTimeout(() => {header.classList.add('header--banner-hidden')}, 600)
 }
 
-function delay(url, time) {
-	setTimeout(() => {window.location = url}, time)
-}
-
 console.log(window.location.pathname)
 console.log(window.location.pathname.split('/'))
