@@ -1,0 +1,38 @@
+.navbar-front
+	visibility: hidden
+	display: inline-block
+	float: right
+	list-style-type: none
+	margin: 70px 0 15px 0
+
+	+e('item')
+		float: right
+		margin: 0 5px
+
+		+m('shrink')
+			animation: shrink 1s forwards
+
++k('shrink')
+	0%
+		margin: 0 15px
+		opacity: 1
+	80%
+		opacity: 0
+	100%
+		margin: 0 -32px
+		opacity: 0
+
+@media screen and (min-width: 768px)
+	.navbar-front
+		visibility: visible
+		margin: 20px 0
+
+		+e('item')
+			float: left
+
+@media screen and (min-width: 992px)
+	.navbar-front
+		margin: 23px 0
+	.navbar-front
+		+e('item')
+			margin: 0 15px
